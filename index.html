@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Julia's RPG Game</title>
-  <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-<div class="container-fluid">
-<h1 class="myHeader">DC RPG Game</h1>
-<div id="winsloses" class="text-center">Overall Wins: 0 Loses: 0</div>
-  <div class="row">
-    <h2 id="task" class="text-center"></h2>
-    <div id="picking" class="text-center"></div>
-  </div>
-  <div class="row theCenter text-center">
-    <div id="myguy" class="col-md-4"></div>
-    <div class="col-md-4">
-      <button id="attack" type="button" class="btn btn-danger" value=attack>Attack</button><br><br>
-    
-      <div id="whathappens"></div><br>
+  <head>
+    <title>Julia's RPG Game</title>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="myHeader">DC RPG Game</div>
+    <div id="main-game-section">
+      <!-- Where the characters are initially available to be selected. -->
+      <div id="characters-section">
+        <div class="section-title">Select Your Character</div>
+      </div>
+      
+      <!-- Section for our selected character. -->
+      <div id="selected-character-section">
+        <div class="section-title">Your Character</div>
+        <!-- Where our selected character will appear. -->
+        <div id="selected-character"></div>
+      </div>
+
+      <!-- Where our enemies available to attack will appear. -->
+      <div id="available-to-attack-section">
+        <div class="section-title">Enemies Available To Attack</div>
+      </div>
+
+      <div class="section-title">Fight Section</div>
+      <div id="fight-section">
+        <button id="attack-button">Attack</button>
+      </div>
+
+      <div id="action">
+        <div class="character-section">
+          <div class="section-title">Defender</div>
+          <!-- Where our defender will appear. -->
+          <div id="defender"></div>
+        </div>
+      </div>
+
     </div>
-    <div id="enemy" class="col-md-4"></div>
-  </div>
-</div>
-
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-
-
-<script src="assets/javascript/game.js"></script>
-</body>
+    <!-- Area for game messages. -->
+    <div id="game-message"></div>
+    <script src="assets/javascript/game.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  </body>
 </html>

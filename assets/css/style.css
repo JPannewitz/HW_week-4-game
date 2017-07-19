@@ -1,7 +1,10 @@
 body {
 	background-image: url("../images/background.jpg");
 	background-size: cover;
-	
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	color: white;
 }
 
 .myHeader {
@@ -10,10 +13,62 @@ body {
 	font-family: 'Bahiana', cursive;
 }
 
-h2 {
-	color: #778899;
+.section-title {
+	color: #C0C0C0;
 }
 
-.houses {
+.character-image {
+	height: 90px;
 	width: 80px;
+	padding-right: 16px;
+	padding-left: 16px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.character {
+	display: inline-block;
+}
+
+.character-name { text-align: center; }
+.character-health {	text-align: center; }
+
+.enemy {
+	display: inline-block;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	cursor: pointer;
+	background-color: red;
+}
+.target-enemy {
+	background-color: black;
+	color: white;
+}
+
+#selected-character {
+	width: 190px;
+	height: 160px;
+}
+
+#attacker {
+	width: 190px;
+	height: 160px;
+}
+
+#defender {
+	width: 190px;
+	height: 160px;
+}
+#defender-name { text-align: center; }
+#defender-health { text-align: center; }
+
+#choose-enemy-button { visibility: hidden; }
+
+#restart-button { visibility: hidden; }
+
+#turn-counter { font-size: 150%; }
+
+button {
+	color: red;
 }
